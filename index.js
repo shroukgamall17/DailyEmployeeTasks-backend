@@ -28,7 +28,7 @@ const connectToDatabase = async () => {
     const client = await pool.connect();
     const res = await client.query("SELECT NOW()");
     console.log("Database connected successfully!");
-    client.release(); 
+    client.release();
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
